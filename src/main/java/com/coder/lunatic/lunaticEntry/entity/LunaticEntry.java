@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Document(collection = "lunatic_entries")
+@Document(collection = "lunatic-entries")
 @Data
 public class LunaticEntry {
 
