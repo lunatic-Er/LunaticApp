@@ -1,6 +1,7 @@
 package com.coder.lunatic.lunaticEntry.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @Document(collection = "users")
 @Data
+@NoArgsConstructor
 public class User {
 
     @Id
@@ -24,5 +26,7 @@ public class User {
     @NonNull
     private String password;
     @DBRef
-    List<LunaticEntry> entries = new ArrayList<>();
+    private List<LunaticEntry> entries = new ArrayList<>();
+    private List<String> roles;
+
 }
